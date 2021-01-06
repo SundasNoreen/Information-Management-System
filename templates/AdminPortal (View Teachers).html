@@ -1,0 +1,49 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .header h2
+    {
+      padding: 20px; background: #fff; text-align: center;
+    }
+    .header h3
+    {
+      padding: 2px; background: #fff; text-align: center;
+    }
+    table
+    {
+        margin-top: 30px; text-align: center;
+    }
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<div class="header"><h2><strong>Teachers</strong></h2>
+<h3>Teachers Teaching in the Department Computer Engineering</h3>
+<h3>Total Number of Teachers in Department are {{ count }}.</h3> </div>
+<table class="center" border="1" cellpadding="3" cellspacing="3">
+    <tr>
+    <td><strong>User ID</strong></td>
+    <td><strong>Full Name</strong></td>
+    <td><strong>Father/Husband Name</strong></td>
+    <td><strong>CNIC</strong></td>
+    <td><strong>Email</strong></td>
+    <td><strong>Grade</strong></td>
+    <td><strong>Qualification</strong></td>
+    <td><strong>Contact Number</strong></td>
+    <td><strong>Address</strong></td>
+    <td><strong>Joining Date</strong></td>
+    <td><strong>Password</strong></td>
+
+    </tr>
+    <tr>{% for row in record %}</tr>
+    <tr>
+    {% for d in row %}
+    <td>{{d}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

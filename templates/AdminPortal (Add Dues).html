@@ -1,0 +1,58 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .form-header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .wrap p
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 15px;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+     .form-input
+     {
+            background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 100%;  margin-bottom:15px;
+     }
+    .wrap
+    {
+            width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue; margin-top: 20px;
+    }
+    .but
+    {
+            background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p
+    {
+        margin-top: 5px; color: black; text-align: center;
+    }
+</style>
+<div class="form-header">
+    <h2>Update Student Dues </h2>
+    <h2>{{ name }}</h2>
+    <h3>Adding Dues of a New Month/Semester</h3>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+        <p><strong>Note that, Following Dues will be applied to only those Students who have cleared their Previous Dues.</strong></p>
+        <label for = "New Dues">New Dues</label><br>
+        <input type = "text" class="form-input" name = "new" placeholder = "Amount" /><br>
+        <label for="Remarks">Remarks</label>
+        <input type = "text" class="form-input" name = "remarks" placeholder = "Remarks" /><br>
+        <p><strong>This is for the students who have not Cleared their dues before the Due Date, their Registration Number must be mentioned.</strong></p>
+        <label for = "New Dues">New Dues</label><br>
+        <input type = "text" class="form-input" name = "total" placeholder = "Amount" /><br>
+        <label for = "New Dues">Registration Number (Write with Dashes).</label><br>
+        <input type = "text" class="form-input" name = "reg" placeholder = "Registration Number" /><br>
+        <label for = "Remarks">Remarks</label><br>
+        <input type = "text" class="form-input" name = "name" placeholder = "Remarks" /><br>
+        <input type = "submit" class="but" value = "Submit" >
+        <p><strong>{{ count }}</strong></p>
+      </form>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "Teacher Layout.html" %}
+{% block body %}
+<style>
+    .header h2
+    {
+      padding: 20px;  color: black;  text-align: center;
+    }
+    .header h3
+    {
+      text-align: center;
+    }
+    table
+    {
+      margin-top: 30px; text-align: center; alignment: center;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="header">
+    <h2><strong>List of Students</strong></h2>
+
+</div>
+    <table class="center" border="1" cellpadding="3" cellspacing="3">
+    <caption><h4><strong>Students of {{ ins1 }}</strong></h4>
+    <h4><strong>Total Number of Students are {{ count1 }}</strong></h4></caption>
+        <tr>
+
+            <td><strong>Registration Number</strong></td>
+            <td><strong>Full Name</strong></td>
+        </tr>
+        <tr>
+            {% for row in record1 %}
+        </tr>
+        <tr>
+            {% for d in row %}
+            <td>{{d}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+    </table>
+
+    <table class="center" border="1" cellpadding="3" cellspacing="3">
+    <caption><h4><strong>Students of {{ ins2 }}</strong></h4>
+    <h4><strong>Total Number of Students are {{ count2 }}</strong></h4></caption>
+        <tr>
+
+            <td><strong>Registration Number</strong></td>
+            <td><strong>Full Name</strong></td>
+        </tr>
+        <tr>
+            {% for row in record2 %}
+        </tr>
+        <tr>
+            {% for d in row %}
+            <td>{{d}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+    </table>
+
+    <table class="center" border="1" cellpadding="3" cellspacing="3">
+    <caption><h4><strong>Students of {{ ins3 }}</strong></h4>
+    <h4><strong>Total Number of Students are {{ count3 }}</strong></h4></caption>
+        <tr>
+
+            <td><strong>Registration Number</strong></td>
+            <td><strong>Full Name</strong></td>
+        </tr>
+        <tr>
+            {% for row in record3 %}
+        </tr>
+        <tr>
+            {% for d in row %}
+            <td>{{d}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+    </table>
+
+    <table class="center" border="1" cellpadding="3" cellspacing="3">
+    <caption><h4><strong>Students of {{ ins4 }}</strong></h4>
+    <h4><strong>Total Number of Students are {{ count4 }}</strong></h4></caption>
+        <tr>
+
+            <td><strong>Registration Number</strong></td>
+            <td><strong>Full Name</strong></td>
+        </tr>
+        <tr>
+            {% for row in record4 %}
+        </tr>
+        <tr>
+            {% for d in row %}
+            <td>{{d}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+    </table>
+{% endblock %}

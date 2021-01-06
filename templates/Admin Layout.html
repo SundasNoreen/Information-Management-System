@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <link rel = "icon" href ="https://i1.pngguru.com/preview/274/169/182/black-circle-png-clipart.jpg" type = "image/x-icon">
+
+	<title>Administrator Portal</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    body{
+       background-color: white;
+    }
+    .wrapper{
+      display: flex;
+      position: relative;
+    }
+    .wrapper .sidebar{
+       width: 250px;
+      height: 100%;
+      background: darkseagreen;
+      padding: 30px 0px;
+      position: fixed;
+       overflow: auto;
+    }
+    .wrapper .sidebar h2 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .wrapper .sidebar h3{
+       color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .wrapper .sidebar ul li{
+      padding: 15px;
+      border-bottom: 2px solid orange;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .wrapper .sidebar ul li a{
+      color: white;
+      display: block;
+    }
+    .wrapper .sidebar ul li a .fas{
+      width: 25px;
+    }
+   .wrapper .sidebar ul li:hover a{
+      color: navy;
+
+        cursor: pointer;
+    }
+
+
+.wrapper .sidebar ul li h4{
+      color: black;
+      display: block;
+
+
+    }
+    .attandance{
+      width: 100%;
+      margin-left: 250px;
+    }
+    .wrapper .attandance{
+      width: 100%;
+      margin-left: 250px;
+        margin-top: 25px;
+    }
+    .form-footer {
+        margin-right:0px; position: fixed; left: 0; bottom: 0; width: 100%; color: black; font-family: "Franklin Gothic Medium Cond"; text-align: right;
+}
+
+</style>
+
+<body>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>IMS</h2>
+        <h3>Administrator Board</h3>
+        <ul>
+
+            <li><h4>STUDENTS</h4></li>
+            <ol>
+                <li><a href="/admin/view/students">View Students</a></li>
+                <li><a href="/admin/view_students_logins">View Student Logins</a></li>
+                <li><a href="/admin/add/students">Add Students</a></li>
+                <li><a href="/admin/remove/students">Remove Students</a></li>
+                <li><a href="/admin/view/dues_details">Update Dues</a></li>
+                <li><a href="/admin/available_subjects">Register into Subjects</a></li>
+                <li><a href="/admin/add_class">Add a New Class</a></li>
+                <li><a href="/admin/delete_class">Delete a Class</a></li>
+                <li><a href="/admin/notify/students">Notifications</a></li>
+
+            </ol>
+            <li><h4>TEACHERS</h4></li>
+            <ol>
+                <li><a href="/admin/view_teachers">View Teachers</a></li>
+                <li><a href="/admin/view_teachers_logins">View Teacher Logins</a></li>
+                <li><a href="/admin/add_teachers">Add Teachers</a></li>
+                <li><a href="/admin/remove_teachers">Remove Teachers</a></li>
+                <li><a href="/admin/view_teachers_courses">View Teacher's Courses</a></li>
+                <li><a href="/admin/update_teachers_courses">Update Teacher's Courses</a></li>
+                <li><a href="/admin/view_salary_details">Update Salary Details</a></li>
+                <li><a href="/admin/notify_teachers">Notifications</a></li>
+            </ol>
+            <li><h4>ADMINISTRATORS</h4></li>
+            <ol>
+                <li><a href="/admin/view_administrators">View Administrators</a></li>
+                <li><a href="/admin/password_reset">General Settings</a></li>
+                <li><a href="/admins/change_pws/teachers">Change Teacher Passwords</a></li>
+                <li><a href="/admins/change_pws/students">Change Students Passwords</a></li>
+                <ol><li><a href="/logout"><h4>SIGN OUT</h4></a></li> </ol>
+
+            </ol>
+        </ul>
+    </div>
+
+    <div class="attandance">
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+    </div>
+</div></body>
+</html>

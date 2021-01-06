@@ -1,0 +1,61 @@
+{% extends "Teacher Layout.html" %}
+{% block body %}
+<style>
+.name h2
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+      table
+    {
+        text-align: justify; color: black; margin-top: 10px; font-family: "Simplified Arabic Fixed";
+    }
+      table li
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 20px; margin-right: 20px;
+
+    }
+     table li p
+    {
+        margin-left: 140px;
+    }
+     .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
+<div class="name"><center><h2>Respective Courses and Classes</h2></center></div>
+<table class="center">
+    <tr><td> <li><strong>User ID:</strong><p>{{ a }}</p></li></td>
+        <td> <li><strong>Full Name:</strong><p>{{ b }}</p></li></td></tr>
+    <tr><td> <li><strong>Course 1:</strong><p>{{ c }}</p></li></td>
+        <td><li><strong>Class for Course 1:</strong><p>{{ d }}</p></li></td></tr>
+    <tr>
+        <td> <li><strong>Course 2:</strong><p>{{ e }}</p></li></td>
+        <td> <li><strong>Class for Course 2:</strong><p>{{ f }}</p></li></td>
+     </tr>
+    <tr>
+        <td> <li><strong>Course 3:</strong><p>{{ g }}</p></li></td>
+         <td><li><strong>Class for Course 3:</strong><p>{{ h }}</p></li></td>
+
+    </tr>
+    <tr>
+      <td> <li><strong>Course 4:</strong><p>{{ i }}</p></li></td>
+<td> <li><strong>Class for Course 4:</strong><p>{{ j }}</p></li></td>
+
+    </tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+{% endblock %}

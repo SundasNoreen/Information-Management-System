@@ -1,0 +1,62 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+.body
+{
+    margin-left: auto;
+}
+    .header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .header h3
+    {
+        margin-top: 15px; text-align: center;
+    }
+    table
+    {
+        margin-top: 30px; text-align: center;
+    }
+    .button{
+         cursor: pointer; border: 1px solid lightgreen; padding: 8px; width: 50%;  margin-bottom:15px; margin-top: 10px;
+    }
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+    <div class="body">
+<div class="header">
+    <h2><strong>Students</strong></h2>
+    <h3>Dues Record of Students of {{ name}}</h3>
+    <h3>Total Number of Students are {{ count }}</h3>
+</div>
+<div class="form">
+    <form action="/admin/update_dues/add"><input type = "submit"  class="button" value = "Add Dues for New Month/Semester"></form>
+    <form action="/admin/update_dues/update"><input type = "submit" class="button" value = "Update Dues"></form>
+</div>
+ <table class="center" border="1" cellpadding="3" cellspacing="3">
+    <tr>
+        <td><strong>Class</strong></td>
+        <td><strong>Registration Number</strong></td>
+        <td><strong>Full Name</strong></td>
+        <td><strong>Dues Paid Till Now</strong></td>
+        <td><strong>Dues Remaining</strong></td>
+        <td><strong>Total Amount Paid</strong></td>
+        <td><strong>Remarks</strong></td>
+        <td><strong>Is Paid? (To be filled by Students)</strong></td>
+    </tr>
+    <tr>
+        {% for row in record %}
+    </tr>
+    <tr>
+        {% for d in row %}
+        <td>{{d}}</td>
+        {% endfor %}
+    </tr>
+        {% endfor %}
+</table>
+    </div>
+{% endblock %}

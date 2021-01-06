@@ -1,0 +1,63 @@
+{% extends "Student Layout.html" %}
+{% block body %}
+<style>
+    .wrapper .Profile  table
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 100px; font-family: "Simplified Arabic Fixed";
+    }
+    .wrapper .Profile  table li
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 150px;
+
+    }
+    .wrapper .Profile  table li p
+    {
+        margin-left: 120px;
+    }
+</style>
+<center><h2>Student Profile</h2></center>
+<table>
+     <tr>
+           <td> <li><strong>Class:</strong><p>{{ a }}</p></li></td>
+            <td> <li><strong>District:</strong><p>{{ g }}</p></li></td>
+     </tr>
+     <tr>
+           <td> <li><strong>Registration Number:</strong><p>{{ c }}</p></li></td>
+            <td> <li><strong>Address:</strong><p>{{ h }}</p></li></td>
+     </tr>
+    <tr>
+        <td> <li><strong>Full Name:</strong><p>{{ b }}</p></li></td>
+           <td> <li><strong>CNIC:</strong><p>{{ j }}</p></li></td>
+
+    </tr>
+    <tr>
+        <td> <li><strong>Father Name:</strong><p>{{ d }}</p></li></td>
+        <td> <li><strong>Email ID:</strong><p>{{ k }}</p></li></td>
+
+
+    </tr>
+    <tr>
+        <td> <li><strong>Gender:</strong><p>{{ f }}</p></li></td>
+           <td> <li><strong>Phone:</strong><p>{{ i }}</p></li></td>
+
+    </tr>
+    <tr>
+        <td> <li><strong>Date of Birth:</strong><p>{{ e }}</p></li></td>
+
+            <td> <li><strong>Is Hostilite:</strong><p>{{ l }}</p></li></td>
+    </tr>
+
+    <tr>
+           <td> <li><strong>User Login ID:</strong><p>{{ m }}</p></li></td>
+            <td> <li><strong>Login Password:</strong><p>{{ n }}</p></li></td>
+    </tr>
+
+</table>
+
+
+
+
+
+
+
+{% endblock %}

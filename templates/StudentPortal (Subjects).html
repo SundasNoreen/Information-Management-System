@@ -1,0 +1,106 @@
+{% extends "Student Layout.html" %}
+{% block body %}
+<style>
+    .header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .header h3
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 15px;
+    }
+    .avail h3
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 15px;
+    }
+    .column
+    {
+        float: left; width: 50%;
+    }
+    .row:after
+    {
+         content: ""; display: table; clear: both;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-header date
+    {
+        margin-bottom: 15px;
+    }
+    .form-input
+     {
+         background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+     }
+    .wrap
+    {
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+    .but
+    {
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p
+    {
+        margin-top: 5px; color: black; text-align: center;
+    }
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<div class="header">
+    <h3><strong>Available Subjects</strong></h3>
+</div>
+    <table class="center " border="1" cellpadding="3" cellspacing="3">
+        <tr >
+            <th><strong>Session</strong></th>
+            <th><strong>Semester</strong></th>
+            <th><strong>Course 1</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 2</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 3</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 4</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 5</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 6</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 7</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 8</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 9</strong></th>
+            <th><strong>Instructor</strong></th>
+            <th><strong>Course 10</strong></th>
+            <th><strong>Instructor</strong></th>
+
+        </tr>
+        <tr>
+            {% for row in record %}
+        </tr>
+        <tr>
+            {% for d in row %}
+            <td>{{d}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

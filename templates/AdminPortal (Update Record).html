@@ -1,0 +1,79 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+    <style>
+.form-header h2{
+    margin-top: 15px;
+    text-align: center;
+}
+.form-header h3{
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form-header label
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+ .form-input{
+        background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+    }
+.wrap{
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+.but{
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+.wrap p{
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+}
+</style>
+<div class="form-header">
+    <h2>Update Teacher's Record</h2>
+    <h3>Fill the Given Form. Make Sure not to Leave any thing Blank.</h3>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+        <div class="row">
+             <div class="column">
+                 <label>Enter Complete User ID </label><br>
+                <input type = "text" class="form-input" name = "id" placeholder = "UserID" /><br>
+
+                <label >Course 1</label><br>
+                <input type = "text" class="form-input" name = "1" placeholder = "Course 1" /><br>
+                <label >Course 2</label><br>
+                <input type = "text"  class="form-input" name = "2" placeholder = "Course 2" /><br>
+                <label>Course 3</label><br>
+                <input type = "text" class="form-input" name = "3" placeholder = "Course 3" /><br>
+                <label>Course 4</label><br>
+                <input type = "text" class="form-input" name = "4" placeholder = "Course 4" /><br></div>
+                 <div class="column">
+                 <label>Class 1</label><br>
+                 <input type = "text"  class="form-input" name = "c1" placeholder = "Class 1" /><br>
+                  <label>Class 2</label><br>
+                 <input type = "text" class="form-input" name = "c2" placeholder = "Class 2" /><br>
+                 <label>Class 3</label><br>
+                 <input type = "text" class="form-input" name = "c3" placeholder = "Class 3" /><br>
+                 <label>Class 4</label><br>
+                 <input type = "text" class="form-input" name = "c4" placeholder = "Class 4" /><br>
+                  <label for = "PIN">class 5</label><br>
+                  <input type = "text" class="form-input" name = "c5" placeholder = "Class 5" /><br></div>
+            <input type = "submit" class="but" value = "Submit" />
+            <p><strong>{{ remove }}</strong></p>
+            </div>
+      </form>
+</div>
+{% endblock %}

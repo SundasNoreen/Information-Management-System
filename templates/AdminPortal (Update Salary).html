@@ -1,0 +1,53 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+.form-header h2
+{
+    margin-top: 15px; text-align: center;
+}
+.form-header h3
+{
+    margin-top: 15px; text-align: center;
+}
+.wrap p
+{
+    margin-top: 15px; text-align: center; margin-bottom: 15px;
+}
+.form-header label
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.but{
+        margin-top:12px;background: white; border: 0px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+
+
+</style>
+<div class="form-header">
+    <h2>Teachers </h2>
+
+    <h3>Adding Salary of a New Month</h3>
+    <h3>Select the Month to Continue</h3>
+    <form action="/admin/update_salary_details/january"> <input type = "submit" class="but" value = "January" ></form>
+     <form action="/admin/update_salary_details/february"> <input type = "submit" class="but" value = "February" ></form>
+    <form action="/admin/update_salary_details/march"> <input type = "submit" class="but" value = "March" ></form>
+    <form action="/admin/update_salary_details/april"> <input type = "submit" class="but" value = "April" ></form>
+    <form action="/admin/update_salary_details/may"> <input type = "submit" class="but" value = "May" ></form>
+     <form action="/admin/update_salary_details/june"> <input type = "submit" class="but" value = "June" ></form>
+    <form action="/admin/update_salary_details/july"> <input type = "submit" class="but" value = "July" ></form>
+    <form action="/admin/update_salary_details/august"> <input type = "submit" class="but" value = "August" ></form>
+    <form action="/admin/update_salary_details/september"> <input type = "submit" class="but" value = "September" ></form>
+     <form action="/admin/update_salary_details/october"> <input type = "submit" class="but" value = "October" ></form>
+    <form action="/admin/update_salary_details/november"> <input type = "submit" class="but" value = "November" ></form>
+    <form action="/admin/update_salary_details/december"> <input type = "submit" class="but" value = "December" ></form>
+      </form>
+
+            </div>
+
+
+
+{% endblock %}

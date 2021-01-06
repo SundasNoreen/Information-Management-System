@@ -1,0 +1,91 @@
+{% extends "Student Layout.html" %}
+{% block body %}
+<style>
+     .form-header h2
+    {
+        margin-top: 10px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 10px; text-align: center; margin-bottom: 15px;
+    }
+    .column
+    {
+        float: left; width: 50%;
+    }
+    .row:after
+    {
+         content: ""; display: table; clear: both;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-header date
+    {
+        margin-bottom: 15px;
+    }
+    .form-input
+     {
+         background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+     }
+    .wrap
+    {
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+    .but
+    {
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p
+    {
+        margin-top: 5px; color: black; text-align: center;
+    }
+</style>
+<div class="form-header" >
+
+    <h3>You can Register your Subjects Here.If you don't register, your result will not be updated.</h3>
+
+    <h3>Donot Leave anything Blank, Write 'Zero' or 'NIL' on the Fields that are to be left blank.</h3>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+    <div class="row">
+
+             <div class="column">
+                 <label>Class</label><br>
+                    <input type = "text" class="form-input" name = "session" placeholder = "Class" required /><br>
+                 <label>Course 1</label><br>
+                    <input type = "text" class="form-input" name = "Course1" placeholder = "Course 1"  required/><br>
+
+                 <label>Course 3</label><br>
+                    <input type = "text" class="form-input" name = "Course3" placeholder = "Course 3"required/><br>
+
+                  <label>Course 5</label><br>
+                    <input type = "text" class="form-input" name = "Course5" placeholder = "Course 5" required/><br>
+
+                 <label>Course 7</label><br>
+                    <input type = "text" class="form-input" name = "Course7" placeholder = "Course 7"required/><br>
+
+                  <label>Course 9</label><br>
+                    <input type = "text" class="form-input" name = "Course9" placeholder = "Course 9" required/><br>
+
+             </div>
+            <div class="column">
+                <label>Semester/Term</label><br>
+                    <input type = "text" class="form-input" name = "sem" placeholder = "Semester/Term" required /><br>
+             <label>Course 2</label><br>
+                    <input type = "text" class="form-input" name = "Course2" placeholder = "Course 2" required /><br>
+             <label>Course 4</label><br>
+                    <input type = "text"  class="form-input" name = "Course4" placeholder = "Course 4"required/><br>
+
+             <label >Course 6</label><br>
+                     <input type = "text" class="form-input" name = "Course6" placeholder = "Course 6"required /><br>
+             <label>Course 8</label><br>
+                    <input type = "text"  class="form-input" name = "Course8" placeholder = "Course 8"required/><br>
+            <label >Course 10</label><br>
+                     <input type = "text" class="form-input" name = "Course10" placeholder = "Course 10" required/><br>
+
+            </div></div>
+    <input type = "submit" class="but" value = "Submit" />
+                <p><strong>{{ count }}</strong></p></form>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .form-header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .wrap p
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 15px;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-input
+    {
+            background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 100%;  margin-bottom:15px;
+        }
+    .wrap{
+            width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue; margin-top: 20px;
+        }
+    .but{
+            background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+        }
+    .wrap p
+    {
+        margin-top: 5px; color: black; text-align: center;
+    }
+</style>
+<div class="form-header">
+    <h2>Update Student Dues </h2>
+    <h2>{{ name }}</h2>
+    <h3>Updating Dues Record of a New Month/Semester</h3>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+        <p><strong>Note that, This Record is being updated by Verifying the Challans Submitted.</strong></p>
+        <p><strong>Only the Students who have updated their dues status to 'Yes' in 'Is Paid' Block on Student Portal are considered here.</strong></p>
+        <label for = "Remarks">Remarks</label><br>
+        <input type = "text" class="form-input" name = "name" placeholder = "Remarks" /><br>
+        <input type = "submit" class="but" value = "Submit" >
+        <p><strong>{{ count }}</strong></p>
+      </form>
+</div>
+{% endblock %}

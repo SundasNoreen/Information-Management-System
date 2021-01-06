@@ -1,0 +1,50 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .form-header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 25px;
+    }
+    .form-header h4
+    {
+        margin-top: 10px; text-align: center; margin-bottom: 15px;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-input
+    {
+        background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+    }
+    .wrap
+    {
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+    .but
+    {
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p
+    {
+    margin-top: 5px; color: black; text-align: center;
+    }
+</style>
+<div class="form-header">
+
+<h2>Teachers</h2>
+    <h3>Remove a Teacher</h3>
+        <form action = "{{ request.path }}" class="wrap"  method = "post">
+            <label for = "Heading">Enter the Complete User Id of the Teacher you want to remove:</label><br>
+            <input type = "text" class="form-input" name = "user" required /><br>
+            <label for = "email">Are you sure want to remove this Teacher? </label>
+             <label>  You can't undo this action. Press 'OK' to Continue.</label><br>
+            <input type = "submit" class="but" value = "OK" />
+            <p><strong>{{ remove }}</strong></p>
+      </form>
+</div>
+{% endblock %}

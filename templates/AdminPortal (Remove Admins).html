@@ -1,0 +1,45 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+    <style>
+.form-header h2{
+    margin-top: 15px; text-align: center; margin-bottom: 50px;
+}
+.form-header h3{
+    margin-bottom: 50px; text-align: center;
+}
+.form-header label
+{
+    margin-top: 15px; margin-bottom: 15px; text-align: center; margin-left: 2px;
+}
+.form-input1{
+        background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 100%;  margin-bottom:15px; margin-top: 10px;
+    }
+.wrap{
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+.but{
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%; margin-top: 10px;
+    }
+.wrap p{
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+}
+</style>
+<div class="form-header">
+    <h2>Removing an Admin</h2>
+
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+        <label for = "Heading">Enter the UserID</label><br>
+        <input type = "text" class="form-input1" name = "id" /><br>
+        <label for = "email">Are you sure want to remove this Student? </label>
+         <label>  You can't undo this action. Press 'OK' to Continue.</label><br>
+        <input type = "submit" class="but" value = "OK" />
+        <p><strong>{{ add }}</strong></p>
+      </form>
+
+            </div>
+
+
+
+{% endblock %}

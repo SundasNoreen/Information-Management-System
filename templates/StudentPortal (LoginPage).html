@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "icon" href ="https://i1.pngguru.com/preview/274/169/182/black-circle-png-clipart.jpg" type = "image/x-icon">
+    <title>Student Login</title>
+<style>
+    *{margin:0; padding: 0; box-sizing: border-box;
+    }
+    html{
+        height: 100%;
+    }
+    body{
+        font-family: 'Segoe UI', sans-serif; font-size: 1rem; line-height: 1.6; height: 100%;
+    }
+    .wrap {
+        width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: lightseagreen;
+    }
+    .login-form{
+        width: 500px; margin: 0 auto; border: 5px solid green; padding: 2rem; background: white;
+    }
+    .form-input{
+        background: #fafafa; border: 2px solid #eeeeee; padding: 12px; width: 100%;
+    }
+    .form-group{
+        margin-bottom: 1rem;
+    }
+    .form-button{
+        background: lightgreen; border: 2px solid palevioletred; color: black; padding: 10px; width: 100%; text-transform: uppercase; cursor: pointer;
+    }
+    .form-button:hover{
+        background: peachpuff;
+    }
+    .form-footer {
+        position: fixed; left: 0; bottom: 0; width: 100%; background-color: lightseagreen; color: white; font-family: "Franklin Gothic Medium Cond"; text-align: center;
+}
+    </style>
+</head>
+
+<div class="wrap">
+    <form class="login-form" action="" method="post">
+    <center><h1>Login as a Student</h1></center>
+            <label><strong> Username : </strong></label>
+            <div class="form-group">
+                <input type="text" class="form-input" name="username" placeholder="Enter Username" value="{{ request.form.username }}" required>
+            </div>
+
+            <label><strong> Password : </strong></label>
+            <div class="form-group">
+                <input type="password" class="form-input" name="password" placeholder="Enter Password" value="{{ request.form.password }}" required>
+            </div>
+
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+
+            <form action="">
+            <div class="form-group">
+                <button class="form-button" type="submit"><strong>Login</strong></button>
+            </div>
+            </form>
+            <div class="form-footer"<footer>
+            <p>&#169;Copy Right 2020 Sundas Noreen<p>
+            <p>All Rights Reserved</p></footer></div>
+
+
+
+        </form>
+    </div>
+
+</html>

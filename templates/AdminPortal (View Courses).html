@@ -1,0 +1,49 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .header h2
+    {
+      padding: 20px; background: #fff; text-align: center;
+    }
+    .header h3
+    {
+      padding: 2px; background: #fff; text-align: center;
+    }
+    table
+    {
+        margin-top: 30px; text-align: center;
+    }
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<div class="header"><h2><strong>Teachers Courses</strong></h2>
+
+
+<table class="center" border="1" cellpadding="3" cellspacing="3">
+    <tr>
+    <td><strong>User ID</strong></td>
+    <td><strong>Full Name</strong></td>
+
+    <td><strong>Course 1</strong></td>
+    <td><strong>Class for Course 1</strong></td>
+    <td><strong>Course 2</strong></td>
+    <td><strong>Class for Course 2</strong></td>
+    <td><strong>Course 3</strong></td>
+    <td><strong>Class for Course 3</strong></td>
+    <td><strong>Course 4</strong></td>
+    <td><strong>Class for Course 4</strong></td>
+    
+    </tr>
+    <tr>{% for row in record %}</tr>
+    <tr>
+    {% for d in row %}
+    <td>{{d}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .form-header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 15px; text-align: center; margin-bottom: 15px;
+    }
+    .column
+    {
+        float: left; width: 50%;
+    }
+    .row:after
+    {
+         content: ""; display: table; clear: both;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-header date
+    {
+        margin-bottom: 15px;
+    }
+    .form-input
+     {
+         background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+     }
+    .wrap
+    {
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+    .but
+    {
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p
+    {
+        margin-top: 5px; color: black; text-align: center;
+    }
+
+</style>
+<div class="form-header">
+    <h2>Add a New Student</h2>
+    <h3>Fill the Given Form. Make Sure Not to Leave anything Blank. Donot use User ID and Registration Number that are already assigned.</h3>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+        <div class="row">
+             <div class="column">
+                 <label>Class to which you want to add Student</label><br>
+                    <input type = "text" class="form-input" name = "class" placeholder = "Class" required /><br>
+                 <label>Full Name</label><br>
+                    <input type = "text" class="form-input" name = "name" placeholder = "Full Name" required /><br>
+                 <label>Registration Number</label><br>
+                    <input type = "text" class="form-input" name = "reg" placeholder = "Registration Number" required /><br>
+                  <label>Father Name</label><br>
+                    <input type = "text"  class="form-input" name = "fath" placeholder = "Father Name" required /><br>
+                  <label>Gender</label><br>
+                    <input type = "text" class="form-input" name = "gen" placeholder = "Gender" required /><br>
+                  <label >CNIC</label><br>
+                     <input type = "text" class="form-input" name = "cnic" placeholder = "CNIC" required/><br>
+                 <label >District</label><br>
+                     <input type = "text" class="form-input" name = "dis" placeholder = "District of Domicile" required/><br>
+
+                <label class="date">Date of Birth</label>
+                 `  <input type="date" name="dob" min="1990-01-01" max="2019-01-01" required/><br>
+             </div>
+            <div class="column">
+                <label >Address</label><br>
+                     <input type = "text" class="form-input" name = "add" placeholder = "Address" required/><br>
+                 <label >Email ID (Enter Valid ID, it will be used for sending emails)</label><br>
+                      <input type = "text" class="form-input" name = "email" placeholder = "Email ID" required/><br>
+                 <label>Contact Number</label><br>
+                      <input type = "text" class="form-input" name = "contact" placeholder = "Contact Number" required/><br>
+                 <label>User ID for Login</label><br>
+                       <input type = "text" class="form-input" name = "id" placeholder = "User ID" required/><br>
+                 <label >Password for Student Login (Inorder to avoid inconvenience, choose a unique password that is not used before)</label><br>
+                        <input type = "text" class="form-input" name = "pin" placeholder = "Password" required/><br>
+
+                  <label>Is Hostilite?</label><br>
+                        <input type = "text" class="form-input" name = "hos" placeholder = "Is Hostilite?" required/><br>
+
+                  <label>Dues Paid Till Now</label><br>
+                        <input type = "text" class="form-input" name = "dues" placeholder = "Dues Paid Till Now" required/><br>
+                  <label>Dues Remaining</label><br>
+                       <input type = "text" class="form-input" name = "rem" placeholder = "Dues Remaining"  /><br>
+            </div>
+        </div>
+                <input type = "submit" class="but" value = "Submit" />
+                <p><strong>{{ add }}</strong></p>
+    </form>
+</div>
+{% endblock %}

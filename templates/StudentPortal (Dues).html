@@ -1,0 +1,68 @@
+{% extends "Student Layout.html" %}
+{% block body %}
+<style>
+    .dues h2
+    {
+        margin-top: 10px;
+    }
+    .wrapper .Profile  table
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 120px; font-family: "Simplified Arabic Fixed";
+    }
+    .wrapper .Profile  table li
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 160px;
+
+    }
+    .wrapper .Profile  table li p
+    {
+        margin-left: 200px;
+    }
+    .wrap button
+     {
+          cursor: pointer; background: lightcyan; border: 1px solid lightgreen; padding: 8px; width: 50%;  margin-bottom:15px; margin-top: 10px;
+     }
+    .wrap h3
+    {
+        text-align: center;  margin-top: 50px;
+    }
+    .wrap h2
+    {
+        text-align: center;  margin-top: 10px;
+    }
+</style>
+<div class="dues">
+
+    <center><h2>Student's Due Record</h2></center>
+</div>
+<table>
+<tr>
+           <td> <li><strong>Class:</strong><p>{{ a }}</p></li></td>
+     </tr>
+     <tr>
+           <td> <li><strong>Registration Number:</strong><p>{{ b }}</p></li></td>
+     </tr>
+    <tr>
+            <td> <li><strong>Name:</strong><p>{{ c }}</p></li></td>
+    </tr>
+    <tr>
+           <td> <li><strong>Amount Paid Till Now:</strong><p>{{ d }}</p></li></td>
+    </tr>
+    <tr>
+            <td> <li><strong>Dues Remaining:</strong><p>{{ e}}</p></li></td>
+    </tr>
+    <tr>
+           <td> <li><strong>Total Amount Paid:</strong><p>{{ f }}</p></li></td>
+    </tr>
+    <tr>
+            <td> <li><strong>Remarks:</strong><p>{{ g }}</p></li></td>
+    </tr>
+
+</table>
+            <div class="wrap">
+        <h3><strong>If you have Paid your Remaining Dues, then Update your Status Here.</strong></h3>
+                <form action="/student/dues_record/update_status">
+                <h2><button type="submit" value="Update Status"><strong>Update Status</strong></button></h2>
+                    </form>
+</div>
+{% endblock %}

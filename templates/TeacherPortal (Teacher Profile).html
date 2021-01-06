@@ -1,0 +1,57 @@
+{% extends "Teacher Layout.html" %}
+{% block body %}
+<style>
+.name h2
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+      table
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 100px; font-family: "Simplified Arabic Fixed";
+    }
+      table li
+    {
+        text-align: justify; color: black; margin-top: 30px; margin-left: 150px;
+
+    }
+     table li p
+    {
+        margin-left: 120px;
+    }
+</style>
+<div class="name"><center><h2>Teacher's Profile</h2></center></div>
+<table>
+    <tr>
+        <td> <li><strong>User ID:</strong><p>{{ a }}</p></li></td>
+        <td> <li><strong>Full Name:</strong><p>{{ b }}</p></li></td></tr>
+    <tr><td> <li><strong>Father/Husband Name:</strong><p>{{ c }}</p></li></td>
+        <td> <li><strong>CNIC:</strong><p>{{ d }}</p></li></td></tr>
+    <tr>
+        <td> <li><strong>Email:</strong><p>{{ e }}</p></li></td>
+        <td> <li><strong>Teacher's Grade:</strong><p>{{ f }}</p></li></td>
+    </tr>
+    <tr>
+        <td> <li><strong>Qualification:</strong><p>{{ g }}</p></li></td>
+        <td> <li><strong>Contact:</strong><p>{{ h }}</p></li></td>
+    </tr>
+    <tr>
+        <td> <li><strong>Address:</strong><p>{{ i }}</p></li></td>
+        <td> <li><strong>Joining Date:</strong><p>{{ j }}</p></li></td>
+    </tr>
+    <tr>
+        <tr><td> <li><strong>Password:</strong><p>{{ k }}</p></li></td></tr>
+
+    </tr>
+
+
+</table>
+
+
+
+
+
+
+
+{% endblock %}

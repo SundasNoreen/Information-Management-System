@@ -1,0 +1,79 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+    .form-header h2
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h3
+    {
+        margin-top: 15px; text-align: center;
+    }
+    .form-header h4
+    {
+        margin-top: 10px; text-align: center; margin-bottom: 15px;
+    }
+    .column
+    {
+      float: left;
+      width: 50%;
+    }
+    .row:after
+    {
+      content: ""; display: table; clear: both;
+    }
+    .form-header label
+    {
+        margin-top: 15px; margin-bottom: 15px; text-align: center;
+    }
+    .form-input
+    {
+        background: #fafafa; border: 1px solid #eeeeee; padding: 8px; width: 80%;  margin-bottom:15px;
+    }
+    .wrap{
+        width: 700px; margin: 0 auto; border: 3px solid grey; padding: 2rem; background: aliceblue;
+    }
+    .but{
+        background: linen; border: 2px solid  ; color: black; padding: 10px;  text-transform: uppercase; cursor: pointer; alignment: center;width: 100%;
+    }
+    .wrap p{
+    margin-top: 5px; color: black; text-align: center;
+    }
+</style>
+<div class="form-header">
+    <h2>Teachers</h2>
+    <h3>Add a Teacher</h3>
+    <h4>Fill the Given Form. Make Sure not to Leave any thing Blank.Donot use UserID assigned already.</h4>
+    <form action = "{{ request.path }}" class="wrap"  method = "post">
+
+                 <label>User ID </label><br>
+                <input type = "text" class="form-input" name = "id" placeholder = "UserID" required /><br>
+                  <label>Full Name </label><br>
+                <input type = "text" class="form-input" name = "name" placeholder = "Full Name" required/><br>
+         <label>Father/Husband Name </label><br>
+                <input type = "text" class="form-input" name = "fname" placeholder = "Father/Husband Name" required /><br>
+                 <label>CNIC </label><br>
+                <input type = "text" class="form-input" name = "nic" placeholder = "CNIC" required/><br>
+                <label >Email ID (Enter Valid ID, it will be used for sending emails)</label><br>
+                <input type = "text" class="form-input" name = "email" placeholder = "Email" /><br>
+                <label >Teacher's Grade</label><br>
+                <input type = "text"  class="form-input" name = "grade" placeholder = "Grade" /><br>
+                <label>Qualification</label><br>
+                <input type = "text" class="form-input" name = "qual" placeholder = "Qualification" /><br>
+                <label>Contact Number </label><br>
+                <input type = "text" class="form-input" name = "num" placeholder = "Contact Number" required/><br>
+                <label>Address </label><br>
+                <input type = "text" class="form-input" name = "address" placeholder = "Address" required/><br>
+                <label>Joining Date </label><br>
+                <input type = "text" class="form-input" name = "join" placeholder = "Joining Date" required/><br>
+                <label>Password </label><br>
+                <input type = "text" class="form-input" name = "pass" placeholder = "Password" required/><br>
+                 <label>On Going Year </label><br>
+                <input type = "text" class="form-input" name = "year" placeholder = "Year" required/><br>
+            <input type = "submit" class="but" value = "Submit" />
+            <p><strong>{{ add }}</strong></p>
+            </div>
+      </form>
+    </form>
+</div>
+{% endblock %}

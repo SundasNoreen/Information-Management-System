@@ -1,0 +1,61 @@
+{% extends "Admin Layout.html" %}
+{% block body %}
+<style>
+.header h2{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.header h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.header table{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.form-button {
+        margin-top: 15px;
+        background: linen;
+        border: 2px solid palevioletred;
+        color: black;
+        padding: 10px;
+        width: 100%;
+        alignment: center;
+        text-transform: uppercase;
+        cursor: pointer;
+}
+.form-button:hover{
+        background: peachpuff;
+    }
+tr:nth-child(even) {color: forestgreen;}
+
+</style>
+    <div class="header">
+    <h2>Notifications for Teachers</h2>
+    <form action="/admin/add_teacher_notifications"><button class="form-button" type="submit"><strong>Add Notifications</strong></button></form>
+    <form action="/admin/mail_teacher_notifications"><button class="form-button" type="submit"><strong>Send Notification Emails</strong></button></form>
+
+        <h3>Notifications Updated</h3>
+    <table  cellpadding="10" cellspacing="30">
+
+<tr>
+
+    <td><strong>Posted On</strong></td>
+
+    <td><strong>Title</strong></td>
+    <td><strong>Message</strong></td>
+
+    </tr>
+<tr>{% for row in record %}</tr>
+
+    <tr>
+{% for d in row %}
+<td>{{d}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+    </div>
+{% endblock %}
