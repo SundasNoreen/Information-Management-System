@@ -1,30 +1,31 @@
 # Information Management System
+
 IMS or Information Management System is actually a Student Database Management Program
 where all the Student’s Data can easily be stored and retrieved. It helps to get rid of traditional
 File system and enter into a virtual world.
 IMS can be used at all levels for a school, college, academy or any educational institute.
 IMS has three major portals, one for Administrators, one for Students and one for teachers.
 
-Features of IMS:
+#Features of IMS:
 Following are the basic Features of IMS:
-▪ Separate logins for Administrators, Teachers and Students.
-▪ User-friendly, attractive and colorful Graphical Interface. It comprises of proper Icons,
-Menus and Buttons with Instructions and Messages indicating actions.
-▪ Timely Updates and Notifications on Portals as well on Emails.
-▪ Sending Emails to all Students and all Teachers on One Click.
-▪ Remote Access.
-▪ Responsive in Nature i.e., Fits to Screens of all Resolutions.
+<ul>
+  <li>Separate logins for Administrators, Teachers and Students.</li>
+<li> User-friendly, attractive and colorful Graphical Interface. It comprises of proper Icons,
+  Menus and Buttons with Instructions and Messages indicating actions.</li>
+  <li> Timely Updates and Notifications on Portals as well on Emails.</li>
+  <li> Sending Emails to all Students and all Teachers on One Click.</li>
+ </ul> 
+#Features of Administrator Portal:
+<ul>
+  <li>Add/Delete a Class, Student or Teacher.</li>
+<li>Update Available Subjects and Dues Record of Students.</li
+  <li>Update Courses, Classes and Salary Details of Teachers.</li>
+  <li> Notify Students and Teachers on Portal and Email.</li>
+  <li> Change Login Credentials of Teachers and Students.</li>
+  <li> Add and View other Admins.</li>
+  <li> Change his Password.</li>
 
-Features of Administrator Portal:
-• Add/Delete a Class, Student or Teacher.
-• Update Available Subjects and Dues Record of Students.
-• Update Courses, Classes and Salary Details of Teachers.
-• Notify Students and Teachers on Portal and Email.
-• Change Login Credentials of Teachers and Students.
-• Add and View other Admins.
-• Change his Password.
-
-Features of Student Portal:
+#Features of Student Portal:
 • View his Profile, Subjects, Dues Record and Grades.
 • Update Dues Status after Paying Fee. Students after Paying their Dues must Change their
 Dues Status to ‘Yes’, else their dues record will not be updated.
