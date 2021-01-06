@@ -6,7 +6,7 @@ File system and enter into a virtual world.
 IMS can be used at all levels for a school, college, academy or any educational institute.
 IMS has three major portals, one for Administrators, one for Students and one for teachers.
 
-#Features of IMS:
+<h2>Features of IMS:</h2>
 Following are the basic Features of IMS:
 <ul>
   <li>Separate logins for Administrators, Teachers and Students.</li>
