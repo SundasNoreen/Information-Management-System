@@ -17,8 +17,8 @@ app.secret_key = 'sundas'
 # Standard Flask config API for Flask MAil.
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'          # Standard.
 app.config['MAIL_PORT'] = 465                         # Standard.
-app.config['MAIL_USERNAME'] = "information.management.system.ims@gmail.com"  # Account used for Sending Mails.
-app.config['MAIL_PASSWORD'] = "termprojectspring2020"         # Password for the Google Account.
+app.config['MAIL_USERNAME'] = ""  # Account used for Sending Mails.
+app.config['MAIL_PASSWORD'] = ""         # Password for the Google Account.
 app.config['MAIl_USE_TLS'] = False                        # Standard.
 app.config['MAIL_USE_SSL'] = True                         # Standard.
 
