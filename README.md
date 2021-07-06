@@ -1,4 +1,4 @@
-# Information Management System
+# Student Information Management System
 
 IMS or Information Management System is actually a Student Database Management Program
 where all the Student’s Data can easily be stored and retrieved. It helps to get rid of traditional
