@@ -21,6 +21,7 @@ app.config['MAIL_USERNAME'] = ""  # Account used for Sending Mails.
 app.config['MAIL_PASSWORD'] = ""         # Password for the Google Account.
 app.config['MAIl_USE_TLS'] = False                        # Standard.
 app.config['MAIL_USE_SSL'] = True                         # Standard.
+app.config['MAIL_DEFAULT_SENDER'] = ""  # Default Account from which flask will send mails.
 
 mail=Mail(app)
 
@@ -436,7 +437,7 @@ def mail_st_not():
             for x in range (0,len(email),1):
                 y=email[x]
                 l=y[0]
-                message = Message(subject, sender="information.management.system.ims@gmail.com", recipients=[l])
+                message = Message(subject, recipients=[l])
                 message.body = mesg
                 mail.send(message)
             add = 'Email Sent Successfully !!'
@@ -804,7 +805,7 @@ def mail_teacher_not():
             for x in range (0,len(email),1):
                 y=email[x]
                 l=y[0]
-                message = Message(subject, sender="information.management.system.ims@gmail.com", recipients=[l])
+                message = Message(subject, recipients=[l])
                 message.body = mesg
                 mail.send(message)
             add = 'Email Sent Successfully !!'
