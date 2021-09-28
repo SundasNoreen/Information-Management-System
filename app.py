@@ -436,7 +436,7 @@ def mail_st_not():
             for x in range (0,len(email),1):
                 y=email[x]
                 l=y[0]
-                message = Message(subject, sender="information.management.system.ims@gmail.com", recipients=[l])
+                message = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=[l])
                 message.body = mesg
                 mail.send(message)
             add = 'Email Sent Successfully !!'
@@ -804,7 +804,7 @@ def mail_teacher_not():
             for x in range (0,len(email),1):
                 y=email[x]
                 l=y[0]
-                message = Message(subject, sender="information.management.system.ims@gmail.com", recipients=[l])
+                message = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=[l])
                 message.body = mesg
                 mail.send(message)
             add = 'Email Sent Successfully !!'
